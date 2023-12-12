@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,*::after,*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 0 40px;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-row: auto;
+  gap: 2px;
+}
+
+.book-tile {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .books-container {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .main {
+    padding: 0;
+  }
+  .books-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
